@@ -1,0 +1,23 @@
+<html>
+<head>
+	<script src="https://code.jquery.com/jquery-1.8.0.min.js"></script>
+
+	<link rel="stylesheet" href = "/assets/styles.css"/>
+	</head>
+	<body>
+	<div  id ="todo-table">
+		<h1> To do list app on Node.js </h1>
+		<form action = "/todo" method = "post">
+			<input type = "text" name ="item" placeholder = "add item"/>
+			<button id ="add-item" type = "submit">Submit</button> 
+		</form> 
+		<ul>
+		<% for(var i = 0; i< data.length; i++ ){ %>
+			<li> <%= data[i].item %> </li>
+		<%  } %>
+		</ul>
+	</div>
+	<p> *Click item to delete</p>
+	</body>
+   <script src="/assets/custom.js"></script>
+<html>
